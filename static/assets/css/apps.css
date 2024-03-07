@@ -1,0 +1,108 @@
+.apps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.apps a {
+    width: 120px;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(14, 13, 13, 0.459);
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+.apps img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.apps a:hover {
+    transform: scale(1.1);
+}
+
+.rounded {
+    border-radius: 15px;
+}
+
+.pinned-apps {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.pinned-apps a {
+    width: 120px;
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(14, 13, 13, 0.459);
+    border-radius: 10px;
+    transition: 0.1s;
+}
+
+.pinned-apps img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+
+.pinned-apps a:hover {
+    transform: scale(1.1);
+}
+
+.rounded {
+    border-radius: 15px;
+}
+
+.search-bar input {
+    margin: 10px;
+    padding: 25px;
+    height: 40px;
+    width: 400px;
+    color: white;
+    background-color: rgba(7, 7, 7, 0.692);
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    border: transparent;
+    border-radius: 15px;
+    outline: none;
+}
+
+.addapp {
+    padding: 80px;
+    margin: auto;
+    position: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 3px 3px 6px #292929;
+    background-color: rgba(14, 13, 13, 0.267);
+    width: fit-content;
+    border-radius: 10px;
+    border: 1px transparent;
+}
+
+#newName::placeholder {
+    color: white;
+}
+
+#newUrl::placeholder {
+    color: white;
+}
+
+#newImage::placeholder {
+    color: white;
+}
