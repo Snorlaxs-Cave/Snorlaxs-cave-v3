@@ -1,0 +1,88 @@
+body {
+
+    background: url("https://th.bing.com/th/id/OIG.DXKuS90TiaPcZL.vVIbP?pid=ImgGn") no-repeat fixed;
+    background-size: cover;
+
+    margin: 0;
+    height: 100vh;
+
+}
+
+h1 {
+    color: black;
+}
+
+@media only screen and (max-width: 2000px) {
+    .proxyform {
+        text-align: center;
+        background-color: transparent;
+        padding: 20px;
+        margin: auto;
+        position: center;
+        justify-content: center;
+        color: black;
+        border: transparent;
+        border-radius: 20px;
+    }
+
+    .proxy {
+        background-color: rgba(230, 173, 173, 0.5);
+        font-family: "Montserrat", sans-serif;
+        font-size: 15px;
+        width: 90%;
+        max-width: 600px;
+        height: 40px;
+        text-align: center;
+        border: solid black 1px;
+        border-radius: 10px;
+        outline: none;
+        transition: .2s;
+    }
+
+    .proxy:hover {
+        background-color: lightblue;
+        color: black;
+        transition: .2s;
+    }
+
+    .proxy:focus {
+        background-color: lightblue;
+        color: black;
+        transition: .2s;
+    }
+
+    .btn {
+        position: absolute;
+        bottom: 90px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        background-color: rgba(173, 216, 230, 0.5);
+        padding: 10px;
+        color: black;
+        border: solid black 1px;
+        border-radius: 10px;
+    }
+
+    .btn:hover {
+        background-color: lightblue;
+        color: black;
+    }
+
+    .btn2 {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        background-color: rgba(173, 216, 230, 0.5);
+        padding: 10px;
+        color: black;
+        border: solid black 1px;
+        border-radius: 10px;
+    }
+
+    .btn2:hover {
+        background-color: lightblue;
+        color: black;
+    }
