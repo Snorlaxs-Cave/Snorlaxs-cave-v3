@@ -1,0 +1,44 @@
+.settings-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.settings-item {
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(14, 13, 13, 0.459);
+    text-align: center;
+}
+
+input {
+    background-color: rgba(2, 2, 2, 0.185);
+    color: white;
+    border: 2px solid rgb(70, 70, 70);
+    outline: none;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 10px;
+}
+
+#imageUrl::placeholder {
+    color: white;
+}
+
+#iconUrl::placeholder {
+    color: white;
+}
+
+#name::placeholder {
+    color: white;
+}
+
+#panicUrl::placeholder {
+    color: white;
+}
+
+#panicKey::placeholder {
+    color: white;
+}
