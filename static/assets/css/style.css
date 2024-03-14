@@ -31,25 +31,6 @@ h1 {
   color: white;
 }
 
-button {
-  border-radius: 10px;
-  font-family: "Montserrat", sans-serif;
-  height: 50px;
-  width: 160px;
-  color: white;
-  background-color: transparent;
-  border: 2px solid white;
-  transition: .2s;
-  cursor: pointer;
-}
-
-button:hover {
-  color: black;
-  background-color: white;
-  transition: .2s;
-  cursor: pointer;
-}
-
 input {
   background-color: rgba(2, 2, 2, 0.185);
   color: white;
