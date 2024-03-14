@@ -36,67 +36,78 @@
   </nav>
   <br>
   <br>
-  <br>
-  <br>
-  <br>
-  <div class="settings-container">
-    <div class="settings-item">
+  <div
+    style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding: 20px; margin-top: 50px; gap:30px;">
+    <div class="setting">
+      <br>
+      <br>
+      <br>
+      <br>
+      <h1>Change Tab Name</h1>
+      <br>
+      <a href="#" onclick="changeTabName()" style="text-decoration: none;color:white;">
+        <input class="search-bar" style="width:250px;height:50px;margin:10px; color: white;" type="text" id="name"
+          placeholder="Enter A New Name">
+        <button class="sbtn" onclick="changeTabName()">Change</button>
+      </a>
+    </div>
+    <div class="setting">
+      <br>
+      <br>
+      <br>
       <br>
       <h1 class="large">Background Changer</h1>
       <div class="search-results" style="display: block;justify-content: center; flex-wrap: wrap; gap:10px;">
         <br>
-        <input class="search-bar" style="width:250px;height:50px;margin:10px;" id="imageUrl" type="text"
+        <input class="search-bar" style="width:350px;height:50px;margin:10px;" id="imageUrl" type="text"
           placeholder="Enter image URL">
-        <button onclick="setImageBackground()" style="width:70px;height:45px;">Apply</button>
-        <button onclick="localStorage.removeItem('backgroundImage');window.location.reload();"
+        <button class="sbtn" onclick="setImageBackground()" style="width:70px;height:45px;">Apply</button>
+        <button class="sbtn" onclick="localStorage.removeItem('backgroundImage');window.location.reload();"
           style="width:70px;height:45px;">Reset</button>
-        <br>
-        <br>
-        <br>
-        </p>
-        <h1 class="large">About:Blank</h1>
-        <a href="#" onclick="cloak()" style="text-decoration: none;color:white;">
-          <br>
-          <br>
-          <button>about:blank</button></a>
-        <br>
-        <br>
-        <br>
-        <h1 class="large">Upload from file</h1>
-        <br>
-        <br>
-        <button onclick="loadFile()">Upload Background</button>
-        <br>
-        <br>
-        <button onclick="localStorage.removeItem('backgroundImage');window.location.reload();">Reset</button>
-        <input type="file" accept="image/*" id="fileInput" style="display: none;" onchange="showImage(event)">
-        <br>
-        <br>
       </div>
-      <br>
     </div>
-    <div class="settings-item">
+    <div class="setting">
       <br>
-      <h1 class="large">Change Tab Name</h1>
       <br>
-      <a href="#" onclick="changeTabName()" style="text-decoration: none;color:white;">
-        <p>
-          <input class="search-bar" style="width:250px;height:50px;margin:10px;" type="text" id="name"
-            placeholder="Enter A New Name">
-          <button onclick="changeTabName()">Change Tab</button>
-        </p>
-      </a>
+      <br>
+      <br>
+      <br>
+      <h1 class="large">About:Blank</h1>
+      <a href="#" onclick="cloak()" <br>
+        <br>
+        <button class="sbtn"
+          style="width: 200px; height:200px text-decoration: none;color:white;">about:blank</button></a>
+    </div>
+    <div class="setting">
+      <br>
+      <br>
+      <br>
+      <h1 class="large">Upload from file</h1>
+      <br>
+      <br>
+      <button class="sbtn" onclick="loadFile()">Upload Background</button>
+      <br>
+      <br>
+      <button class="sbtn" style="width: 150px; height:200px text-decoration: none;color:white;"
+        onclick="localStorage.removeItem('backgroundImage');window.location.reload();">Reset</button>
+      <input type="file" accept="image/*" id="fileInput" style="display: none;" onchange="showImage(event)">
+    </div>
+    <div class="setting">
       <br>
       <br>
       <h1 class="large">Panic Key</h1>
       <br>
-      <input class="search-bar" style="width:400px;height:50px;margin:10px;" type="text" id="panicKey"
+      <input class="search-bar" style="width:270px;height:50px;margin:10px;" type="text" id="panicKey"
         placeholder="Enter panic key">
       <br>
-      <input class="search-bar" style="width:400px;height:50px;margin:10px;" type="text" id="panicUrl"
+      <input class="search-bar" style="width:270px;height:50px;margin:10px;" type="text" id="panicUrl"
         placeholder="Enter panic URL">
       <br>
-      <button onclick="setPanicKey()">Set Panic Key</button>
+      <button class="sbtn" onclick="setPanicKey()">Set Panic Key</button>
+    </div>
+    <div class="setting">
+      <br>
+      <br>
       <br>
       <br>
       <br>
@@ -105,7 +116,7 @@
       <br>
       <input class="search-bar" style="width:250px;height:50px;margin:10px;" type="text" id="iconUrl"
         placeholder="Enter icon URL">
-      <button onclick="changeIcon()">Change Icon</button>
+      <button class="sbtn" onclick="changeIcon()">Change</button>
     </div>
     <script src="/assets/js/index.js"></script>
     <script src="/uv/uv.bundle.js"></script>
