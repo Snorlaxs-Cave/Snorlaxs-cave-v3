@@ -88,7 +88,6 @@
     position: center;
     justify-content: center;
     text-align: center;
-    box-shadow: 3px 3px 6px #292929;
     background-color: rgba(14, 13, 13, 0.267);
     width: fit-content;
     border-radius: 10px;
@@ -105,4 +104,23 @@
 
 #newImage::placeholder {
     color: white;
+}
+
+.inputapp {
+    border-radius: 1px;
+    padding: 2px;
+}
+
+.buttonapp {
+    border-radius: 1px;
+    padding: 2.4px 10px;
+    text-align: center;
+    background-color: rgba(14, 13, 13, 0.267);
+    cursor: pointer;
+    color: white;
+}
+
+.buttonapp:hover {
+    background-color: white;
+    color: black;
 }
