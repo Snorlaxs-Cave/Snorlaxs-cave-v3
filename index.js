@@ -9,6 +9,7 @@ const __dirname = process.cwd();
 const server = http.createServer();
 const app = express(server);
 const bareServer = createBareServer("/bare/");
+const PORT = process.env.PORT || 8080
 
 app.use(express.json());
 app.use(
@@ -86,5 +87,5 @@ server.on("listening", () => {
 });
 
 server.listen({
-  port: process.env.PORT,
+  port: PORT,
 });
