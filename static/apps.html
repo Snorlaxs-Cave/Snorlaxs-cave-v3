@@ -58,6 +58,10 @@
         <img src="/assets/img/discord.jpg" class="rounded" draggable="false"
           style="width:100px;height:100px;"><br>Discord</img>
       </a>
+      <a href="#" onclick="openLink('spotify.com/')">
+        <img src="/assets/img/spotify.png" class="rounded" draggable="false"
+          style="width:100px;height:100px;"><br>Spotify</img>
+      </a>
       <a href="#" onclick="openLink(`/www.google.com`)">
         <img src="/assets/img/google.png" class="rounded" draggable="false"
           style="width:100px;height:100px;"><br>Google</img>
@@ -66,13 +70,13 @@
         <img src="/assets/img/widger.png" class="rounded" draggable="false" style="width:100px;height:100px;"><br>Widget
         Bot</img>
       </a>
+      <a href="#" onclick="openLink('ai.kitty.boats')">
+        <img src="/assets/img/river-ai.png" class="rounded" draggable="false"
+          style="width:100px;height:100px;"><br>River AI</img>
+      </a>
       <a href="#" onclick="openLink('coolmathgames.com/')">
         <img src="/assets/img/coolmathgames.png" class="rounded" draggable="false"
           style="width:100px;height:100px;"><br>CoolMath</img>
-      </a>
-      <a href="#" onclick="openLink('spotify.com/')">
-        <img src="/assets/img/spotify.png" class="rounded" draggable="false"
-          style="width:100px;height:100px;"><br>Spotify</img>
       </a>
       <a href="#" onclick="openLink('youtube.com/')">
         <img src="/assets/img/youtube.png" class="rounded" draggable="false"
@@ -170,11 +174,11 @@
   <br>
 
   <div class="addapp" style="padding: 5px;">
-    <input class="inputapp" style="border: 1px solid white;" id="newName" placeholder="App name">
-    <input class="inputapp" style="border: 1px solid white;" id="newUrl" placeholder="App url">
-    <input class="inputapp" style="border: 1px solid white;" id="newImage" placeholder="Image url">
+    <input style="border: 1px solid white;" id="newName" placeholder="App name">
+    <input style="border: 1px solid white;" id="newUrl" placeholder="App url">
+    <input style="border: 1px solid white;" id="newImage" placeholder="Image url">
 
-    <button class="buttonapp" style="border: 1px solid white;" onclick="addapps()">Add App</button>
+    <button style="border: 1px solid white;" onclick="addapps()">Add App</button>
   </div>
   <script>
     document.getElementById('searchApps').addEventListener('input', function (event) {
