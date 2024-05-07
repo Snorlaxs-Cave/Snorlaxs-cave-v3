@@ -13,6 +13,8 @@
   <meta name="sps-bot" content="true">
   <link rel="stylesheet" href="/assets/css/style.css" />
   <link rel="stylesheet" href="/assets/css/animations.css" />
+  <link rel="stylesheet" href="/assets/css/ubar.css" />
+  <script src="/assets/js/ubar.js"></script>
   <script src="/assets/js/functions.js"></script>
   <script>
     // Custom Background Check
@@ -183,6 +185,18 @@ window.addEventListener('keydown', (event) => {
 });
 </script>
 </head>
+<div id="urlBar">
+  <input type="text" id="urlInput" placeholder="Search Google or type a URL" />
+  <i class="bi bi-search search"></i>
+  <button class="bi bi-arrows-fullscreen fs" onclick="toggleFs()" title="Fullscreen"></button>
+  <button class="bi bi-box-arrow-up-right ab" onclick="openWindow()" title="Open in About:Blank"></button>
+  <button class="bi bi-arrow-90deg-up arrow" onclick="hideBar()" title="Hide Bar"></button>
+  <button class="bi bi-arrow-clockwise reload" onclick="reload()" title="Reload"></button>
+  <button class="bi bi-caret-right forward" onclick="forward()" title="Forward"></button>
+  <button class="bi bi-caret-left back" onclick="back()" title="Back"></button>
+  <button class="bi bi-box-arrow-right exit" onclick="exit()" title="Return Home"></button>
+  <button class="bi bi-code-slash devTools" onclick="devTools()" title="Inspect Element"></button>
+</div>
 <iframe src="loadingscreen.html" id="siteurl" style="position: fixed; inset: 0px; outline: none; border: none; height: 100%; width: 100%; overflow: hidden;"></iframe>
 <script>
 window.onload = function () {
