@@ -24,16 +24,16 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "static", "index.html"));
 });
 app.get("/math", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "Games.html"));
+  res.sendFile(path.join(__dirname, "static", "games.html"));
 });
 app.get("/english", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "Apps.html"));
+  res.sendFile(path.join(__dirname, "static", "apps.html"));
 });
 app.get("/about", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "About.html"));
+  res.sendFile(path.join(__dirname, "static", "about.html"));
 });
 app.get("/settings", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "Settings.html"));
+  res.sendFile(path.join(__dirname, "static", "settings.html"));
 });
 app.get("/portal", (req, res) => {
   res.sendFile(path.join(__dirname, "static", "loader.html"));
