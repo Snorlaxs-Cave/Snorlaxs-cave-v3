@@ -13,7 +13,19 @@
   <meta name="sps-bot" content="true">
   <link rel="stylesheet" href="/assets/css/style.css" />
   <link rel="stylesheet" href="/assets/css/animations.css" />
+  <link rel="stylesheet" href="/assets/css/ubar.css" />
+  <script src="/assets/js/ubar.js"></script>
   <script src="/assets/js/functions.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <script>
+    // Custom Background Check
+    var bgUrl = localStorage.getItem('backgroundImage');
+    if (bgUrl === 'none' || bgUrl === null || bgUrl === '') {
+      document.body.style.backgroundImage = `url('/assets/img/snorlax_background.jpg')`;
+    } else {
+      document.body.style.backgroundImage = `url(${bgUrl})`;
+    }
+  </script>
   <script>
     function changeTabName() {
         var name = document.getElementById('name').value;
@@ -52,6 +64,7 @@
       }
     });
   </script>
+</body>
 <script>
 function changeIcon() {
   var iconUrl = document.getElementById("iconUrl").value;
@@ -88,6 +101,69 @@ window.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <script>
+window.onload = function () {
+  var savedImage = localStorage.getItem('backgroundImage');
+  if (savedImage) {
+    var output = document.body;
+    output.style.backgroundImage = "url('" + savedImage + "')";
+    output.style.backgroundSize = "cover";
+    output.style.backgroundRepeat = "no-repeat";
+  }
+};
+
+var loadFile = function () {
+  document.getElementById('fileInput').click();
+};
+
+var showImage = function (event) {
+  var reader = new FileReader();
+  reader.onload = function () {
+    var output = document.body;
+    output.style.backgroundImage = "url('" + reader.result + "')";
+    output.style.backgroundSize = "cover";
+    output.style.backgroundRepeat = "no-repeat";
+
+    localStorage.setItem('backgroundImage', reader.result);
+  };
+  reader.readAsDataURL(event.target.files[0]);
+};
+</script>
+<script>
+window.onload = function () {
+  var savedImage = localStorage.getItem('backgroundImage');
+  if (savedImage) {
+    var output = document.body;
+    output.style.backgroundImage = "url('" + savedImage + "')";
+    output.style.backgroundSize = "cover";
+    output.style.backgroundRepeat = "no-repeat";
+  }
+};
+
+var loadFile = function () {
+  document.getElementById('fileInput').click();
+};
+
+var showImage = function (event) {
+  var reader = new FileReader();
+  reader.onload = function () {
+    var output = document.body;
+    output.style.backgroundImage = "url('" + reader.result + "')";
+    output.style.backgroundSize = "cover";
+    output.style.backgroundRepeat = "no-repeat";
+
+    localStorage.setItem('backgroundImage', reader.result);
+  };
+  reader.readAsDataURL(event.target.files[0]);
+};
+</script>
+<script>
+const visited = localStorage.getItem('visited');
+if (!visited) {
+  alert('HELLO! Welcome to Snorlax\'s Cave V2');
+  localStorage.setItem('visited', true);
+}
+</script>
+<script>
 window.addEventListener('keydown', (event) => {
   const keysPressed = (event.key === '~');
   if (keysPressed) {
@@ -110,6 +186,19 @@ window.addEventListener('keydown', (event) => {
 });
 </script>
 </head>
+<div id="urlBar">
+  <input type="text" id="urlInput" placeholder="Search Google or type a URL" />
+  <i class="bi bi-search search"></i>
+  <button class="bi bi-arrows-fullscreen fs" onclick="toggleFs()" title="Fullscreen"></button>
+  <button class="bi bi-box-arrow-up-right ab" onclick="openWindow()" title="Open in About:Blank"></button>
+  <button class="bi bi-arrow-90deg-up arrow" onclick="hideBar()" title="Hide Bar"></button>
+  <button class="bi bi-arrow-clockwise reload" onclick="reload()" title="Reload"></button>
+  <button class="bi bi-caret-right forward" onclick="forward()" title="Forward"></button>
+  <button class="bi bi-caret-left back" onclick="back()" title="Back"></button>
+  <button class="bi bi-box-arrow-right exit" onclick="exit()" title="Return Home"></button>
+  <button class="bi bi-code-slash devTools" onclick="devTools()" title="Inspect Element"></button>
+</div>
+<iframe src="loadingscreen.html" id="siteurl"></iframe>
 <body>
 <script src="/assets/js/index.js"></script>
 <script src="/uv/uv.bundle.js"></script>
@@ -128,5 +217,4 @@ window.addEventListener('keydown', (event) => {
           document.querySelector("#agLoader").src = encodedAg;
     };
 </script>
-<iframe src="loadingscreen.html" id="agLoader" style="position: fixed; inset: 0px; outline: none; border: none; height: 100%; width: 100%; overflow: hidden;"></iframe>
 </body>
