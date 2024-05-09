@@ -198,7 +198,11 @@ window.addEventListener('keydown', (event) => {
   <button class="bi bi-box-arrow-right exit" onclick="exit()" title="Return Home"></button>
   <button class="bi bi-code-slash devTools" onclick="devTools()" title="Inspect Element"></button>
 </div>
-<iframe src="loadingscreen.html" id="siteurl"></iframe>
+<iframe src="loading.html" id="siteurl"></iframe>
+<script src="/uv/uv.bundle.js"></script>
+<script src="/assets/js/themes.js"></script>
+<script src="/assets/js/agloader.js"></script>
+<script src="/assets/js/main.js"></script>
 <script>
 window.onload = function () {
       let encodedUrl = localStorage.getItem("encodedUrl");
