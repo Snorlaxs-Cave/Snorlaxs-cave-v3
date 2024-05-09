@@ -12,7 +12,7 @@ function openLink(url) {
 }
 
 function ourDiscord() {
-    window.location.href = 'https://discord.gg/snorlaxscave';
+    window.location.href = 'https://discord.gg/ujCeNsGXud';
 }
 
 
