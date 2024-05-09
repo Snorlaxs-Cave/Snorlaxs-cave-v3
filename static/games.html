@@ -548,7 +548,7 @@
       const image = document.getElementById('newImage').value;
 
       const apps = JSON.parse(localStorage.getItem('apps')) || [];
-      const id = new Date().getTime(); // Use the current time as a unique ID
+      const id = new Date().getTime(); 
       apps.push({ id, name, url, image });
       localStorage.setItem('apps', JSON.stringify(apps));
       addAppToDOM(id, name, url, image);
