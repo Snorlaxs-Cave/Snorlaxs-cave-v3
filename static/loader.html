@@ -14,9 +14,33 @@
   <link rel="stylesheet" href="/assets/css/style.css" />
   <link rel="stylesheet" href="/assets/css/animations.css" />
   <link rel="stylesheet" href="/assets/css/ubar.css" />
-  <script src="/assets/js/loader.js"></script>
   <script src="/assets/js/functions.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <script>
+        window.onload = function () {
+            let encodedUrl = localStorage.getItem("encodedUrl");
+            encodedUrl = "/service/" + encodedUrl;
+            document.querySelector("#siteurl").src = encodedUrl;
+            // URL Cloaking
+            function rndNum() {
+                return Math.floor(Math.random() * 900) + 100;
+            }
+            function rndAbcString(length) {
+                const characters = "abcdefghijklmnopqrstuvw0123456789012345";
+                let result = "";
+                for (let i = 0; i < length; i++) {
+                    result += characters.charAt(Math.floor(Math.random() * characters.length));
+                }
+                return result;
+            }
+            var randomThreeDigitNumber = rndNum();
+            var randomAlphanumericString = rndAbcString(5);
+            var url = "/student?auth=" + randomAlphanumericString;
+            var title = "Google Docs";
+
+            history.pushState({}, title, url);
+        };
+    </script>
   <script>
     // Custom Background Check
     var bgUrl = localStorage.getItem('backgroundImage');
@@ -199,8 +223,14 @@ window.addEventListener('keydown', (event) => {
   <button class="bi bi-code-slash devTools" onclick="devTools()" title="Inspect Element"></button>
 </div>
 <iframe src="loading.html" id="siteurl"></iframe>
-  <script src="/assets/js/index.js"></script>
-  <script src="/uv/uv.handler.js"></script>
-  <script src="/uv/uv.bundle.js"></script>
-  <script src="/uv/uv.config.js"></script>
+<script src="/uv/uv.bundle.js"></script>
+<script src="/assets/js/loader.js"></script>
+<script src="/assets/js/main.js"></script>
+<script>
+window.onload = function () {
+      let encodedUrl = localStorage.getItem("encodedUrl");
+      encodedUrl = "/service/" + encodedUrl;
+      document.querySelector("#siteurl").src = encodedUrl;
+    };
+</script>
 </html>
