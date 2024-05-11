@@ -213,8 +213,9 @@ window.addEventListener('keydown', (event) => {
   </script>
   <script>
     window.onload = function () {
-          let encodedAg = localStorage.getItem("agUrl");
-          document.querySelector("#agLoader").src = encodedAg;
+        let encodedAg = localStorage.getItem("agUrl");
+        encodedAg = "/service/" + encodedAg;
+        document.querySelector("#siteurl").src = encodedAg;
     };
 </script>
 </body>
