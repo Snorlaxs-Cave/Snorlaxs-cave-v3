@@ -13,6 +13,10 @@ function openLink(url) {
     apps('https://' + url);
 }
 
+function send(url) {
+  location.href = window.location.origin + url;
+}
+
 function ourDiscord() {
     window.location.href = 'https://discord.gg/ujCeNsGXud';
 }
