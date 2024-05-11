@@ -15,7 +15,7 @@ Object.defineProperty(siteUrl, 'src', {
     }
 });
 
-search.value = Ultraviolet.codec.xor.decode(encodedUrl);
+urlInput.value = Ultraviolet.codec.xor.decode(encodedUrl);
 
 function handleLoadEvent() {
     const decodedPart = getUrlDecodedPart(this.contentWindow.location.href);
