@@ -9,11 +9,6 @@ function apps(url, ag) {
     });
 }
 
-function openAg(url, ag) {
-
-  location.href = '/lessons';
-}
-
 function openLink(url) {
     apps('https://' + url);
 }
