@@ -62,8 +62,9 @@ app.get("/derpman", (req, res) => {
 app.get("/cats", (req, res) => {
   res.sendFile(path.join(__dirname, "static/people-secrets/", "cats.html"));
 });
-app.get("/*", (req, res) => {
-  res.sendFile(path.join(__dirname, "static", "404.html"));
+app.use((req, res) => {
+  res.statusCode = 404;
+  res.sendFile(path.join(__dirname, './static/404.html'))
 });
 
 server.on("request", (req, res) => {
