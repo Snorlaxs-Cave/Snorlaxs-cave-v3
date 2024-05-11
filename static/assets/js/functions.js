@@ -1,10 +1,17 @@
-function apps(url) {
+function apps(url, ag) {
     window.navigator.serviceWorker.register('/sw.js', {
         scope: __uv$config.prefix
     }).then(() => {
-        localStorage.setItem('agUrl', location.href = __uv$config.prefix + __uv$config.encodeUrl(url));
+        localStorage.setItem('currentAg', ag, location.href = __uv$config.prefix + __uv$config.encodeUrl(url));
         location.href = '/dashboard';
+        agU = Ultraviolet.codec.xor.encode(url);
+        localStorage.setItem('agUrl', agU);
     });
+}
+
+function openAg(url, ag) {
+
+  location.href = '/lessons';
 }
 
 function openLink(url) {
